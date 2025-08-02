@@ -182,16 +182,73 @@ const AllEnquiry = () => {
       case 'markUnread':
         updateReadStatus(selectedEnquiries, false);
         break;
+      case 'addStar':
+        updateStarredStatus(selectedEnquiries, true);
+        break;
       case 'delete':
         if (window.confirm('Are you sure you want to delete selected enquiries?')) {
-          // Implement delete functionality
-          console.log('Delete enquiries:', selectedEnquiries);
+          deleteEnquiries(selectedEnquiries);
         }
         break;
       default:
         break;
     }
     setSelectedEnquiries([]);
+  };
+
+  const updateStarredStatus = (enquiryIds, isStarred) => {
+    const ids = Array.isArray(enquiryIds) ? enquiryIds : [enquiryIds];
+    
+    // Update locally first for immediate UI feedback
+    setEnquiries(enquiries.map(enquiry =>
+      ids.includes(enquiry._id) ? { ...enquiry, isStarred } : enquiry
+    ));
+
+    // Make API call to update on server
+    axios.post(`${process.env.REACT_APP_API_URL}/updateEnquiryStarredStatus`, { 
+      enquiryIds: ids, 
+      isStarred 
+    })
+    .then(response => {
+      if (response.data.status !== 'ok') {
+        console.error('Error updating starred status:', response.data.message);
+        setMessage('Error updating starred status: ' + response.data.message);
+        // Revert changes if API call fails
+        setEnquiries(enquiries.map(enquiry =>
+          ids.includes(enquiry._id) ? { ...enquiry, isStarred: !isStarred } : enquiry
+        ));
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      setMessage('Error updating starred status');
+      // Revert changes if API call fails
+      setEnquiries(enquiries.map(enquiry =>
+        ids.includes(enquiry._id) ? { ...enquiry, isStarred: !isStarred } : enquiry
+      ));
+    });
+  };
+
+  const deleteEnquiries = (enquiryIds) => {
+    const ids = Array.isArray(enquiryIds) ? enquiryIds : [enquiryIds];
+
+    axios.post(`${process.env.REACT_APP_API_URL}/deleteEnquiries`, { 
+      enquiryIds: ids 
+    })
+    .then(response => {
+      if (response.data.status === 'ok') {
+        // Remove deleted enquiries from state
+        setEnquiries(enquiries.filter(enquiry => !ids.includes(enquiry._id)));
+        setMessage(`Successfully deleted ${response.data.deletedCount} enquiries`);
+      } else {
+        console.error('Error deleting enquiries:', response.data.message);
+        setMessage('Error deleting enquiries: ' + response.data.message);
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      setMessage('Error deleting enquiries');
+    });
   };
 
   const getStatusCounts = () => {
