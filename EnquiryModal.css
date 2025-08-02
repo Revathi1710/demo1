@@ -1,0 +1,466 @@
+/* Enquiry Modal Styles - TradeIndia Inspired Professional Design */
+
+/* Modal Container */
+.enquiry-modal .modal-dialog {
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.enquiry-modal .modal-content {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* Modal Header */
+.enquiry-modal-header {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  border-bottom: none;
+  padding: 20px 25px;
+  position: relative;
+}
+
+.enquiry-modal-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+}
+
+.enquiry-modal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.enquiry-modal-header .btn-close {
+  filter: invert(1);
+  opacity: 0.8;
+  position: relative;
+  z-index: 1;
+}
+
+.enquiry-modal-header .btn-close:hover {
+  opacity: 1;
+}
+
+/* Modal Body */
+.enquiry-modal-body {
+  background-color: #f8fafc;
+}
+
+.enquiry-content {
+  background: white;
+}
+
+/* Product Information Section */
+.product-info-section {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  padding: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.product-card {
+  background: white;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.product-image-container {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f8fafc;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.05);
+}
+
+.product-title {
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.price-container {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #059669;
+}
+
+.price-unit {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.seller-info {
+  background: #f1f5f9;
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 4px solid #3b82f6;
+}
+
+.seller-info strong {
+  color: #1e293b;
+  font-size: 1rem;
+}
+
+.seller-location {
+  color: #64748b;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+/* Form Section */
+.enquiry-form-section {
+  background: white;
+}
+
+.form-label-custom {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.form-label-custom i {
+  color: #3b82f6;
+}
+
+/* Quantity Input */
+.quantity-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.quantity-input {
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  padding-right: 70px;
+}
+
+.quantity-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  outline: none;
+}
+
+.quantity-unit {
+  position: absolute;
+  right: 16px;
+  color: #6b7280;
+  font-size: 0.9rem;
+  font-weight: 500;
+  pointer-events: none;
+}
+
+/* Date Input */
+.date-input {
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.date-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  outline: none;
+}
+
+/* Message Textarea */
+.message-textarea {
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.message-textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  outline: none;
+}
+
+.message-textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* Contact Information Section */
+.contact-info-section {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.section-title {
+  color: #374151;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.section-title i {
+  color: #3b82f6;
+}
+
+.contact-info-card {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+}
+
+.contact-details {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  color: #374151;
+  font-weight: 500;
+}
+
+.contact-item i {
+  color: #3b82f6;
+  width: 20px;
+}
+
+.login-prompt {
+  color: #dc2626;
+  font-weight: 500;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.cancel-btn {
+  padding: 12px 24px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 2px solid #d1d5db;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #f3f4f6;
+  border-color: #9ca3af;
+  transform: translateY(-1px);
+}
+
+.submit-enquiry-btn {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-enquiry-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.submit-enquiry-btn:hover::before {
+  left: 100%;
+}
+
+.submit-enquiry-btn:hover {
+  background: linear-gradient(135deg, #047857 0%, #065f46 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(5, 150, 105, 0.3);
+}
+
+.submit-enquiry-btn:disabled {
+  background: #9ca3af;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Alert Styles */
+.alert {
+  border-radius: 8px;
+  border: none;
+  font-weight: 500;
+}
+
+.alert-success {
+  background-color: #dcfce7;
+  color: #166534;
+  border-left: 4px solid #22c55e;
+}
+
+.alert-danger {
+  background-color: #fef2f2;
+  color: #dc2626;
+  border-left: 4px solid #ef4444;
+}
+
+/* Loading Spinner */
+.spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .enquiry-modal .modal-dialog {
+    margin: 10px;
+    max-width: calc(100% - 20px);
+  }
+  
+  .enquiry-modal-header {
+    padding: 15px 20px;
+  }
+  
+  .enquiry-modal-title {
+    font-size: 1.1rem;
+  }
+  
+  .product-info-section {
+    padding: 15px;
+  }
+  
+  .enquiry-form-section {
+    padding: 20px 15px;
+  }
+  
+  .contact-details {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form-actions {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+  
+  .cancel-btn,
+  .submit-enquiry-btn {
+    width: 100%;
+    padding: 14px;
+  }
+  
+  .price {
+    font-size: 1.3rem;
+  }
+  
+  .product-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .enquiry-content .row .col-md-3,
+  .enquiry-content .row .col-md-9 {
+    margin-bottom: 15px;
+  }
+  
+  .product-image-container {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+
+/* Animation for modal entrance */
+.enquiry-modal.show .modal-dialog {
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Hover effects for interactive elements */
+.form-control:hover {
+  border-color: #3b82f6;
+}
+
+.product-card .row:hover .product-title {
+  color: #3b82f6;
+}
+
+/* Focus states for accessibility */
+.form-control:focus,
+.btn:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .enquiry-modal {
+    display: none !important;
+  }
+}
