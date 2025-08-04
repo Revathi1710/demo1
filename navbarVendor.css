@@ -1,0 +1,207 @@
+/* NavbarVendor Styles */
+.navbar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Logo Styles */
+.navbar-brand {
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+  text-decoration: none;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.logoname {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+}
+
+.spanlogo {
+  color: #ffd700;
+  font-weight: 800;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Upgrade Section */
+.upgradeDetails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upgradeBtn {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.upgradeBtn:hover {
+  background: linear-gradient(45deg, #ee5a24, #ff6b6b);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+  text-decoration: none;
+  color: white;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* User Section */
+.user-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.user-icon {
+  font-size: 1.5rem;
+  color: #ffd700;
+  margin-right: 8px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-text {
+  color: white;
+  font-weight: 500;
+  margin: 0;
+  font-size: 0.95rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.login-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.login-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+  text-decoration: none;
+  color: white;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.8rem 0;
+  }
+  
+  .container1 {
+    padding: 0 10px;
+  }
+  
+  .logoname {
+    font-size: 1.5rem;
+  }
+  
+  .upgradeDetails {
+    margin-bottom: 10px;
+  }
+  
+  .upgradeBtn {
+    padding: 6px 16px;
+    font-size: 0.8rem;
+  }
+  
+  .user-section {
+    justify-content: center;
+  }
+  
+  .user-icon {
+    font-size: 1.3rem;
+  }
+  
+  .welcome-text,
+  .login-link {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .logoname {
+    font-size: 1.3rem;
+  }
+  
+  .upgradeBtn {
+    padding: 5px 12px;
+    font-size: 0.75rem;
+  }
+  
+  .user-icon {
+    font-size: 1.2rem;
+  }
+  
+  .welcome-text,
+  .login-link {
+    font-size: 0.8rem;
+  }
+  
+  .row > div {
+    margin-bottom: 5px;
+  }
+}
+
+/* Animation for smooth loading */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Hover effects for better interactivity */
+.navbar-brand:hover .logoname {
+  color: #ffd700;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover .spanlogo {
+  color: white;
+  transition: color 0.3s ease;
+}
